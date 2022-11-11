@@ -1,0 +1,60 @@
+{
+  "contracts": {
+    "Box": {
+      "address": "0xd00d90AdAC8F5705bbe094B36100443b68516074",
+      "constructorCode": "608060405234801561001057600080fd5b506101bf806100206000396000f3fe",
+      "bodyBytecodeHash": "d72dd353eb556d7abf6ed2a04a46909549a8ef72efe545ad6326b60b75a47477",
+      "localBytecodeHash": "145c27eb6abaf3c6bacde9252caec24771e98c4fae036ce802db5cbcfabd946b",
+      "deployedBytecodeHash": "145c27eb6abaf3c6bacde9252caec24771e98c4fae036ce802db5cbcfabd946b",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "contracts/lib/proxy/Initializable.sol",
+          "label": "_initialized",
+          "astId": 596,
+          "type": "t_bool",
+          "src": "1115:25:4"
+        },
+        {
+          "contract": "Initializable",
+          "path": "contracts/lib/proxy/Initializable.sol",
+          "label": "_initializing",
+          "astId": 599,
+          "type": "t_bool",
+          "src": "1243:26:4"
+        },
+        {
+          "contract": "Box",
+          "path": "contracts/Box.sol",
+          "label": "_value",
+          "astId": 6,
+          "type": "t_uint256",
+          "src": "154:22:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {},
+  "manifestVersion": "2.2",
+  "version": "1.0.0"
+}

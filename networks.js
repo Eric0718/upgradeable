@@ -1,0 +1,32 @@
+require("dotenv/config")
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+module.exports = {
+  networks: {
+    development: {
+      protocol: 'http',
+      host: 'localhost',
+      port: 8545,
+      gas: 5000000,
+      gasPrice: 5e9,
+      networkId: '*',
+    },
+    kto: {
+      provider: () => new HDWalletProvider(process.env.K_KEY, process.env.KTO_URL),
+       network_id: 2559,
+      skipDryRun: true,
+      gas: 500000,
+      gasPrice: 1000,
+    },
+    goerli: {
+      provider: () => new HDWalletProvider(process.env.G_KEY, process.env.GOERLI_URL),
+      // provider: () => new HDWalletProvider(process.env.KEY, "https://kortho-chain.co"),
+      // provider: () => new HDWalletProvider(process.env.KEY, "https://kortho-chain.org"),
+      network_id: 5,
+      skipDryRun: true,
+      gas: 5000000,
+      gasPrice: 1000,
+    },
+  },
+};
+
+

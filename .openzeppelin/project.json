@@ -1,25 +1,27 @@
 {
   "manifestVersion": "2.2",
   "contracts": {
-    "Box": "Box"
+    "Collect": "Collect",
+    "Box": "Box",
+    "Verify": "Verify"
   },
   "dependencies": {},
-  "name": "y",
-  "version": "1.0.0",
+  "name": "collect",
+  "version": "v1.0.0",
   "compiler": {
     "compilerSettings": {
       "optimizer": {
-        "enabled": true,
+        "enabled": false,
         "runs": "200"
       }
     },
     "typechain": {
       "enabled": false
     },
+    "manager": "openzeppelin",
     "solcVersion": "0.6.12",
     "artifactsDir": "build/contracts",
-    "contractsDir": "contracts",
-    "manager": "openzeppelin"
+    "contractsDir": "contracts"
   },
   "telemetryOptIn": true
 }

@@ -14,8 +14,8 @@ module.exports = {
       provider: () => new HDWalletProvider(process.env.K_KEY, process.env.KTO_URL),
        network_id: 2559,
       skipDryRun: true,
-      gas: 500000,
-      gasPrice: 1000,
+      gas: 3000000,
+      gasPrice: 100,
     },
     goerli: {
       provider: () => new HDWalletProvider(process.env.G_KEY, process.env.GOERLI_URL),

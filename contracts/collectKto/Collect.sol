@@ -12,13 +12,11 @@ contract Collect is Verify{
     address public _community;
     address public _technical;
     address public _devAddress;
+    uint256 public _baseReward;
+    Verify public _vContract;
 
     mapping(address => address) _inviteRelationship; 
-    
-    uint256 public _baseReward;
-    uint256 public _reinputModBase;
-    uint256 public _reinputLimit;
-    Verify public _vContract;
+    mapping(address => bool) public _participated;
 
     //evnets
     event Participate(address participant,address inviter,uint256 amount);
@@ -29,22 +27,21 @@ contract Collect is Verify{
         _community = community;
         _technical = technical;
         _devAddress = devAddress;
-        _baseValue = uint256(1).mul(_decimal); //1030
-        _baseReward = uint256(1).mul(_decimal);//30
+        _baseValue = uint256(1030).mul(_decimal); //1030
+        _baseReward = uint256(30).mul(_decimal);//30
         _vContract = vContract;
         
         __Ownable_init();
-        _vContract.initialize();
     }
 
     function participate(address inviter) external payable{
         require(inviter != address(0),"Invalid inviter address!");
         require(msg.value == _baseValue,"participate value not wright!");
         require(address(this).balance >= _baseReward,"balance Not enough amount!");
-        //require(_inviteRelationship[msg.sender] == address(0),"User already participated!");
-
+        require(_inviteRelationship[msg.sender] == address(0),"User already participated!");
+        require(_participated[inviter],"address not a inviter!");
         _inviteRelationship[msg.sender] = inviter;
-       
+        _participated[msg.sender] = true;
         require(_baseReward > 0);
         payable(_community).transfer(_baseReward.div(2));
         payable(_technical).transfer(_baseReward.div(2));
@@ -53,13 +50,14 @@ contract Collect is Verify{
 
     function claimRewards(uint256 claimValue,string calldata signTime, bytes32 signature) external{
         require(claimValue > 0,"claim amount can't be 0!");
-        require(address(this).balance >= claimValue,"not sufficient funds!");
-
         //verify signature
-        bool ok = Verify.verifySignature(claimValue,signTime,msg.sender,signature);
+        bool ok = _vContract.verifySignature(claimValue,signTime,msg.sender,signature);
         if (!ok){
             revert("verify signature failed!");
         }
+
+        claimValue = claimValue.div(1e7);
+        require(address(this).balance >= claimValue,"not sufficient funds!");
         payable(msg.sender).transfer(claimValue);
         emit Claim(msg.sender,claimValue,signature);
     }
@@ -84,6 +82,14 @@ contract Collect is Verify{
         _vContract = vContract;
     }
     function getTotalRewards()external view returns(uint256) {
-        return address(this).balance;
+        return address(this).balance*1e7;
+    }
+    function setInviters(address[] calldata inviters)external onlyOwner{
+        for(uint i = 0;i < inviters.length;i++){
+            _participated[inviters[i]] = true;
+        }
+    }
+    function getRelationship(address user) external view returns(address){
+        return _inviteRelationship[user];
     }
 }

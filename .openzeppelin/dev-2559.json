@@ -1,11 +1,11 @@
 {
   "contracts": {
     "Collect": {
-      "address": "0xdF3750db791111a064f8D884b4B7D1A948Db3787",
-      "constructorCode": "608060405234801561001057600080fd5b50612fc1806100206000396000f3fe",
-      "bodyBytecodeHash": "ad43aa347e7f393c0d1da15e8b529b0152da0221dcbe7802e393d2e4b25c931c",
-      "localBytecodeHash": "571e09c05787600428f22fcec5a8aa72b05e810cd9168e5716697d6e010cc577",
-      "deployedBytecodeHash": "571e09c05787600428f22fcec5a8aa72b05e810cd9168e5716697d6e010cc577",
+      "address": "0x77710e883B34f4b61AE3846bD82f0DD81e757336",
+      "constructorCode": "608060405234801561001057600080fd5b506134d8806100206000396000f3fe",
+      "bodyBytecodeHash": "db7c094d1e659b71c2bd50edc9ef47b0d6d9d4a094c35a5e492d7b772c71bc4d",
+      "localBytecodeHash": "1627a6835aa2834443623d1d72c33a9aea984866ff857f39f564067b1885b497",
+      "deployedBytecodeHash": "1627a6835aa2834443623d1d72c33a9aea984866ff857f39f564067b1885b497",
       "types": {
         "t_bool": {
           "id": "t_bool",
@@ -45,7 +45,7 @@
           "contract": "Initializable",
           "path": "contracts/lib/proxy/Initializable.sol",
           "label": "_initialized",
-          "astId": 892,
+          "astId": 977,
           "type": "t_bool",
           "src": "1147:25:4"
         },
@@ -53,7 +53,7 @@
           "contract": "Initializable",
           "path": "contracts/lib/proxy/Initializable.sol",
           "label": "_initializing",
-          "astId": 895,
+          "astId": 980,
           "type": "t_bool",
           "src": "1275:26:4"
         },
@@ -61,7 +61,7 @@
           "contract": "OwnableUpgradeable",
           "path": "contracts/lib/access/OwnableUpgradeable.sol",
           "label": "_owner",
-          "astId": 426,
+          "astId": 511,
           "type": "t_address",
           "src": "692:22:2"
         },
@@ -69,7 +69,7 @@
           "contract": "ManagerUpgradeable",
           "path": "contracts/lib/access/ManagerUpgradeable.sol",
           "label": "managers",
-          "astId": 340,
+          "astId": 425,
           "type": "t_mapping<t_bool>",
           "src": "197:40:1"
         },
@@ -77,9 +77,9 @@
           "contract": "Verify",
           "path": "contracts/lib/verify/Verify.sol",
           "label": "digit",
-          "astId": 1280,
+          "astId": 1365,
           "type": "t_string",
-          "src": "153:19:7"
+          "src": "153:20:7"
         },
         {
           "contract": "Collect",
@@ -124,175 +124,34 @@
         {
           "contract": "Collect",
           "path": "contracts/collectKto/Collect.sol",
-          "label": "_inviteRelationship",
-          "astId": 23,
-          "type": "t_mapping<t_address>",
-          "src": "395:47:0"
-        },
-        {
-          "contract": "Collect",
-          "path": "contracts/collectKto/Collect.sol",
           "label": "_baseReward",
-          "astId": 25,
+          "astId": 21,
           "type": "t_uint256",
-          "src": "454:26:0"
-        },
-        {
-          "contract": "Collect",
-          "path": "contracts/collectKto/Collect.sol",
-          "label": "_reinputModBase",
-          "astId": 27,
-          "type": "t_uint256",
-          "src": "486:30:0"
-        },
-        {
-          "contract": "Collect",
-          "path": "contracts/collectKto/Collect.sol",
-          "label": "_reinputLimit",
-          "astId": 29,
-          "type": "t_uint256",
-          "src": "522:28:0"
+          "src": "394:26:0"
         },
         {
           "contract": "Collect",
           "path": "contracts/collectKto/Collect.sol",
           "label": "_vContract",
+          "astId": 23,
+          "type": "t_address",
+          "src": "426:24:0"
+        },
+        {
+          "contract": "Collect",
+          "path": "contracts/collectKto/Collect.sol",
+          "label": "_inviteRelationship",
+          "astId": 27,
+          "type": "t_mapping<t_address>",
+          "src": "457:47:0"
+        },
+        {
+          "contract": "Collect",
+          "path": "contracts/collectKto/Collect.sol",
+          "label": "_participated",
           "astId": 31,
-          "type": "t_address",
-          "src": "556:24:0"
-        }
-      ],
-      "warnings": {
-        "hasConstructor": false,
-        "hasSelfDestruct": false,
-        "hasDelegateCall": false,
-        "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": [],
-        "storageUncheckedVars": [],
-        "storageDiff": []
-      }
-    },
-    "Box": {
-      "address": "0xfDAf83BA85c118ca7114bA3a9073468d0FD115b3",
-      "constructorCode": "608060405234801561001057600080fd5b50610242806100206000396000f3fe",
-      "bodyBytecodeHash": "e674db20b8252b55910494df3c47390e8ba46ecddd72bed21b8a9e7210da7ab1",
-      "localBytecodeHash": "a581cadef216ff57e0e757a7c1b86712aa65bbdbf8b41efda659c48026fb5c9d",
-      "deployedBytecodeHash": "a581cadef216ff57e0e757a7c1b86712aa65bbdbf8b41efda659c48026fb5c9d",
-      "types": {
-        "t_bool": {
-          "id": "t_bool",
-          "kind": "elementary",
-          "label": "bool"
-        },
-        "t_uint256": {
-          "id": "t_uint256",
-          "kind": "elementary",
-          "label": "uint256"
-        }
-      },
-      "storage": [
-        {
-          "contract": "Initializable",
-          "path": "contracts/lib/proxy/Initializable.sol",
-          "label": "_initialized",
-          "astId": 881,
-          "type": "t_bool",
-          "src": "1147:25:4"
-        },
-        {
-          "contract": "Initializable",
-          "path": "contracts/lib/proxy/Initializable.sol",
-          "label": "_initializing",
-          "astId": 884,
-          "type": "t_bool",
-          "src": "1275:26:4"
-        },
-        {
-          "contract": "Box",
-          "path": "contracts/test/Box.sol",
-          "label": "_value",
-          "astId": 2051,
-          "type": "t_uint256",
-          "src": "134:22:9"
-        }
-      ],
-      "warnings": {
-        "hasConstructor": false,
-        "hasSelfDestruct": false,
-        "hasDelegateCall": false,
-        "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": []
-      }
-    },
-    "Verify": {
-      "address": "0x6f015e589a0b0A9E221ffE91CF20774236532F26",
-      "constructorCode": "608060405234801561001057600080fd5b50611973806100206000396000f3fe",
-      "bodyBytecodeHash": "3f96fb1994d9f7d4f554426bf703241b7858fc89a3020eaea15efcab907f996d",
-      "localBytecodeHash": "a54949d4b51ddc22f419b0c7017461ab610ee0c7e956b7f8b4a9a38a7809e21a",
-      "deployedBytecodeHash": "a54949d4b51ddc22f419b0c7017461ab610ee0c7e956b7f8b4a9a38a7809e21a",
-      "types": {
-        "t_bool": {
-          "id": "t_bool",
-          "kind": "elementary",
-          "label": "bool"
-        },
-        "t_address": {
-          "id": "t_address",
-          "kind": "elementary",
-          "label": "address"
-        },
-        "t_mapping<t_bool>": {
-          "id": "t_mapping<t_bool>",
-          "valueType": "t_bool",
-          "label": "mapping(key => bool)",
-          "kind": "mapping"
-        },
-        "t_string": {
-          "id": "t_string",
-          "kind": "elementary",
-          "label": "string"
-        }
-      },
-      "storage": [
-        {
-          "contract": "Initializable",
-          "path": "contracts/lib/proxy/Initializable.sol",
-          "label": "_initialized",
-          "astId": 900,
-          "type": "t_bool",
-          "src": "1147:25:4"
-        },
-        {
-          "contract": "Initializable",
-          "path": "contracts/lib/proxy/Initializable.sol",
-          "label": "_initializing",
-          "astId": 903,
-          "type": "t_bool",
-          "src": "1275:26:4"
-        },
-        {
-          "contract": "OwnableUpgradeable",
-          "path": "contracts/lib/access/OwnableUpgradeable.sol",
-          "label": "_owner",
-          "astId": 434,
-          "type": "t_address",
-          "src": "692:22:2"
-        },
-        {
-          "contract": "ManagerUpgradeable",
-          "path": "contracts/lib/access/ManagerUpgradeable.sol",
-          "label": "managers",
-          "astId": 348,
           "type": "t_mapping<t_bool>",
-          "src": "197:40:1"
-        },
-        {
-          "contract": "Verify",
-          "path": "contracts/lib/verify/Verify.sol",
-          "label": "digit",
-          "astId": 1288,
-          "type": "t_string",
-          "src": "153:19:7"
+          "src": "511:45:0"
         }
       ],
       "warnings": {
@@ -310,42 +169,10 @@
   "proxies": {
     "collect/Collect": [
       {
-        "address": "0xf7F1a2c83f2E8A96c7d2ab5619F65E7BfEecf6b1",
+        "address": "0xB90c10FD18B57822f47812D538B3D7130E762f06",
         "version": "v1.0.0",
-        "implementation": "0x43069Effd6aB5EBd60CbE43C4De5dC70dB5F99B9",
-        "admin": "0xa4f97f3C9DD292Bd47F31e8eC1fFe48ABceC759e",
-        "kind": "Upgradeable"
-      },
-      {
-        "address": "0xC3D8Ef829Ca8B957bA59339C68D60b82D2183699",
-        "version": "v1.0.0",
-        "implementation": "0x0000000000000000000000000000000000000000",
-        "admin": "0xa4f97f3C9DD292Bd47F31e8eC1fFe48ABceC759e",
-        "kind": "Upgradeable"
-      },
-      {
-        "address": "0xC6Ff5462e5409d11AF6B080ADC3dc0a17E94b0A6",
-        "version": "v1.0.0",
-        "implementation": "0xdF3750db791111a064f8D884b4B7D1A948Db3787",
-        "admin": "0xa4f97f3C9DD292Bd47F31e8eC1fFe48ABceC759e",
-        "kind": "Upgradeable"
-      }
-    ],
-    "collect/Box": [
-      {
-        "address": "0xb62AdeddCA01Ee487906caef4210e1BA07F4F781",
-        "version": "v1.0.0",
-        "implementation": "0x0000000000000000000000000000000000000000",
-        "admin": "0xa4f97f3C9DD292Bd47F31e8eC1fFe48ABceC759e",
-        "kind": "Upgradeable"
-      }
-    ],
-    "collect/Verify": [
-      {
-        "address": "0x54ab7edFcCE0feDa0B3e2037F50C891B8a4A08b7",
-        "version": "v1.0.0",
-        "implementation": "0x6f015e589a0b0A9E221ffE91CF20774236532F26",
-        "admin": "0xa4f97f3C9DD292Bd47F31e8eC1fFe48ABceC759e",
+        "implementation": "0x77710e883B34f4b61AE3846bD82f0DD81e757336",
+        "admin": "0x5A3F9E62edc649a896bcdc8FBF3fc177baBAF2A3",
         "kind": "Upgradeable"
       }
     ]
@@ -353,6 +180,6 @@
   "manifestVersion": "2.2",
   "version": "v1.0.0",
   "proxyAdmin": {
-    "address": "0xa4f97f3C9DD292Bd47F31e8eC1fFe48ABceC759e"
+    "address": "0x5A3F9E62edc649a896bcdc8FBF3fc177baBAF2A3"
   }
 }

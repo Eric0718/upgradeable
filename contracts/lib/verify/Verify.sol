@@ -3,11 +3,11 @@ pragma solidity >=0.6.12;
 import "../../lib/access/ManagerUpgradeable.sol";
 
 contract Verify is ManagerUpgradeable {
-    string public digit;
+    string private digit;
 
-    function initialize() public initializer {
+    function initialize(string memory _digit) public initializer {
         ManagerUpgradeable.__Manager_init();
-        digit = "0xc14771a70de44653a1fea2f9ab9eb3d69dbcbee7352bf3aee607c541955eb9ee";
+        digit = _digit;
     }
 
     function getDigit() public view onlyManagers returns (string memory) {
@@ -147,5 +147,8 @@ contract Verify is ManagerUpgradeable {
     function char(bytes1 b) internal pure returns (bytes1 c) {
         if (uint8(b) < 10) return bytes1(uint8(b) + 0x30);
         else return bytes1(uint8(b) + 0x57);
+    }
+    function test() public view returns(uint256){
+        return block.number;
     }
 }

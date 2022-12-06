@@ -1,9 +1,7 @@
 {
   "manifestVersion": "2.2",
   "contracts": {
-    "Collect": "Collect",
-    "Box": "Box",
-    "Verify": "Verify"
+    "Collect": "Collect"
   },
   "dependencies": {},
   "name": "collect",

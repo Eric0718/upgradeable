@@ -63,7 +63,7 @@ contract Collect is Verify{
     }
 
     function withdraw(uint256 amount) public onlyOwner{
-        require(amount > 0,"not sufficient funds!");
+        require(address(this).balance >= amount,"not sufficient funds!");
         payable(_devAddress).transfer(amount);
     }
 

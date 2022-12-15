@@ -19,8 +19,6 @@ module.exports = {
     },
     goerli: {
       provider: () => new HDWalletProvider(process.env.G_KEY, process.env.GOERLI_URL),
-      // provider: () => new HDWalletProvider(process.env.KEY, "https://kortho-chain.co"),
-      // provider: () => new HDWalletProvider(process.env.KEY, "https://kortho-chain.org"),
       network_id: 5,
       skipDryRun: true,
       gas: 5000000,

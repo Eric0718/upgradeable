@@ -1,7 +1,8 @@
 {
   "manifestVersion": "2.2",
   "contracts": {
-    "Collect": "Collect"
+    "Collect": "Collect",
+    "PerpetualMachine": "PerpetualMachine"
   },
   "dependencies": {},
   "name": "collect",
